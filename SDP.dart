@@ -1,16 +1,6 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
-class SDP{
-  static int dimen;
-  static double width;
-  static BuildContext context;
-
-  static void init(BuildContext c){
-    context = c;
-    width = MediaQuery.of(context).size.width;
-  }
-
-  static double sdp(double dp) {
-    return (dp / 300) * width;
-  }
+double sdp(BuildContext context, double dp) {
+  double width = MediaQuery.of(context).size.width;
+  return (dp / 300) * width;
 }
